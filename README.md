@@ -7,8 +7,8 @@ This is an easy and interactive one!
 ## :vertical_traffic_light: Setup
 - Clone the repo or download the .zip file; <br/>
 1. Option #1: navigate to the public folder, double click **Pig_Game_index.html** to play locally.
-2. Option #2: Run ` npm i ` from inside The Pig Game folder.
-2.1. Run ` npm run dev`.
+2. Option #2: Run ` npm i ` from inside The Pig Game folder. <br/>
+2.1. Run ` npm run dev`. <br/>
 2.2. Go to your browser and type `localhost:4000` to play.
 
 ## :books: Game Rules
