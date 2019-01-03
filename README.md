@@ -5,9 +5,11 @@ This is a simple dice game written in ES6. As with many games of folk origin, Pi
 This is an easy and interactive one!
 
 ## :vertical_traffic_light: Setup
-1. Clone the repo or download the .zip file;
-2. Run ` npm i ` from inside The Pig Game folder.
-3. Go to your browser and go to your `localhost:4000`
+- Clone the repo or download the .zip file;
+1. Option #1: navigate to the public folder, double click **Pig_Game_index.html** to play locally.
+2. Option #2: Run ` npm i ` from inside The Pig Game folder.
+2.1. Run ` npm run dev`.
+2.2. Go to your browser and type `localhost:4000` to play.
 
 ## :books: Game Rules
 1. The game has 2 players, playing in rounds;
