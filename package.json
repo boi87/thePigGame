@@ -1,0 +1,19 @@
+{
+  "name": "thepiggame",
+  "version": "1.0.0",
+  "description": "a simple dice game",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boi87/thePigGame.git"
+  },
+  "author": "M.Boi, J.Schmedtmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boi87/thePigGame/issues"
+  },
+  "homepage": "https://github.com/boi87/thePigGame#readme"
+}
