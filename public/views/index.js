@@ -44,7 +44,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
     //2. Display the result
     let diceDOM = document.querySelector(".dice");
     diceDOM.style.display = "block";
-    diceDOM.src = "dice-" + dice + ".png";
+    diceDOM.src = "media/dice-" + dice + ".png";
 
     //3. Update the round score IF the rolled number was NOT a 1
 
@@ -105,7 +105,7 @@ const nextPlayer = () => {
   document.querySelector(".player-1-panel").classList.toggle("active");
 
   // hide the dice when the players switch
-  // document.querySelector(".dice").style.display = "none";
+  document.querySelector(".dice").style.display = "none";
 };
 
 document.querySelector(".btn-new").addEventListener("click", init);
