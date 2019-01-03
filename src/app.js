@@ -19,6 +19,3 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "/public/", "Pig_Game_index.html"));
 });
 app.listen(4000);
-
-// app.set("port", process.env.PORT || 4000);
-// module.exports = app;
