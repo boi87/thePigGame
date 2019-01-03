@@ -8,7 +8,6 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-
 let scores, roundScore, activePlayer, dice, gamePlaying;
 
 // *** Initialize New Game ***
@@ -36,6 +35,7 @@ const init = () => {
 
 init();
 
+// ***randomly roll dice and determine what a number one does***
 document.querySelector(".btn-roll").addEventListener("click", () => {
   if (gamePlaying) {
     // 1. Random number
@@ -61,6 +61,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
   }
 });
 
+//***hold button will store score in global score***
 document.querySelector(".btn-hold").addEventListener("click", () => {
   if (gamePlaying) {
     // add CURRENT score to GLOBAL score
@@ -71,7 +72,6 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
       scores[activePlayer];
 
     // check if player won the game
-
     if (scores[activePlayer] >= 100) {
       document.querySelector("#name-" + activePlayer).textContent = "WINNER!";
       document.querySelector(".dice").style.dysplay = "none";
@@ -96,8 +96,7 @@ const nextPlayer = () => {
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
 
-  //add and remove the class .active
-
+  //***add and remove the class .active***
   // document.querySelector(".player-0-panel").classList.remove("active");
   // document.querySelector(".player-1-panel").classList.add("active");
 
@@ -106,7 +105,7 @@ const nextPlayer = () => {
   document.querySelector(".player-1-panel").classList.toggle("active");
 
   // hide the dice when the players switch
-  document.querySelector(".dice").style.display = "none";
+  // document.querySelector(".dice").style.display = "none";
 };
 
 document.querySelector(".btn-new").addEventListener("click", init);
