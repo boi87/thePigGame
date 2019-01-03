@@ -1,7 +1,7 @@
 # The Pig Game :pig:
 
 ## :flashlight: What is it? 
-This is a simple dice game written in ES6 using express.js and . As with many games of folk origin, Pig is played with many rule variations. 
+This is a simple dice game written in ES6 using express.js. As with many games of folk origin, Pig is played with many rule variations. 
 This is an easy and interactive one!
 
 ## :vertical_traffic_light: Setup
