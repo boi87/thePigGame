@@ -5,7 +5,7 @@ This is a simple dice game written in ES6 using express.js. As with many games o
 This is an easy and interactive one!
 
 ## :vertical_traffic_light: Setup
-- Clone the repo or download the .zip file;
+- Clone the repo or download the .zip file; <br/>
 1. Option #1: navigate to the public folder, double click **Pig_Game_index.html** to play locally.
 2. Option #2: Run ` npm i ` from inside The Pig Game folder.
 2.1. Run ` npm run dev`.
