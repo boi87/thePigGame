@@ -19,17 +19,17 @@ let scores,
 
 // customized max-score
 
-// const getMaxScore = () => {
-// if (gamePlaying)
 document.querySelector(".btn-winning-score").addEventListener("click", () => {
   inputMaxScore = document.getElementById("input-winning-score").value;
   console.log(inputMaxScore);
   if (!inputMaxScore) {
     maxScore = 100;
     console.log("no custom max score entered");
+    alert("no custom max score entered. Your max score is 100");
   } else {
     maxScore = inputMaxScore;
     console.log("your new maxscore is", inputMaxScore);
+    alert("your new maxscore is " + inputMaxScore);
   }
 });
 // };
