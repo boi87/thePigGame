@@ -76,6 +76,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       // current player loses all global scores
       scores[activePlayer] = 0;
       document.querySelector("#score-" + activePlayer).textContent = 0;
+      prevDice = 0;
 
       setTimeout(() => {
         nextPlayer();
