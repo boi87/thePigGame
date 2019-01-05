@@ -27,9 +27,11 @@ document.querySelector(".btn-winning-score").addEventListener("click", () => {
     console.log("no custom max score entered");
     alert("no custom max score entered. Your max score is 100");
   } else {
+    // document.getElementById("input-winning-score").textContent = "fuck";
     maxScore = inputMaxScore;
     console.log("your new maxscore is", inputMaxScore);
     alert("your new maxscore is " + inputMaxScore);
+    init();
   }
 });
 // };
