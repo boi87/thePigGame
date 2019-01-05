@@ -56,7 +56,32 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       ).textContent = roundScore;
     } else {
       //next player
-      nextPlayer();
+      console.log(activePlayer, "GOT A ONE HERE!");
+      let diceDOM = document.querySelector(".dice");
+      diceDOM.style.display = "block";
+      diceDOM.src = "media/dice-red-1.png";
+
+      setTimeout(() => {
+        nextPlayer();
+      }, 300);
+    }
+
+    // ***DOUBLESIX - if player gets two sixes in a row, roundscore to zero and nextplayer()***
+    if (dice === 6 && prevDice === 6) {
+      console.log(activePlayer, "DOUBLE SIX");
+      let diceDOM = document.querySelector(".dice");
+      diceDOM.style.display = "block";
+      diceDOM.src = "media/dice-double-6.png";
+
+      setTimeout(() => {
+        nextPlayer();
+      }, 300);
+    } else if (dice === 6 && prevDice != 6) {
+      prevDice = 6;
+      console.log(activePlayer, prevDice);
+    } else {
+      prevDice = dice;
+      console.log(activePlayer, prevDice);
     }
   }
 });
