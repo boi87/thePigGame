@@ -8,7 +8,31 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-let scores, roundScore, activePlayer, dice, gamePlaying;
+let scores,
+  roundScore,
+  activePlayer,
+  dice,
+  prevDice,
+  gamePlaying,
+  inputMaxScore,
+  maxScore;
+
+// customized max-score
+
+// const getMaxScore = () => {
+// if (gamePlaying)
+document.querySelector(".btn-winning-score").addEventListener("click", () => {
+  inputMaxScore = document.getElementById("input-winning-score").value;
+  console.log(inputMaxScore);
+  if (!inputMaxScore) {
+    maxScore = 100;
+    console.log("no custom max score entered");
+  } else {
+    maxScore = inputMaxScore;
+    console.log("your new maxscore is", inputMaxScore);
+  }
+});
+// };
 
 // *** Initialize New Game ***
 const init = () => {
@@ -88,9 +112,11 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
 
 //***hold button will store score in global score***
 document.querySelector(".btn-hold").addEventListener("click", () => {
+  // ***if active player pressed hold after a six, this won't impact the next player***
   prevDice === 6 ? (prevDice = 0) : prevDice;
 
   if (gamePlaying) {
+    // getMaxScore();
     // add CURRENT score to GLOBAL score
     scores[activePlayer] += roundScore;
 
@@ -99,7 +125,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
       scores[activePlayer];
 
     // check if player won the game
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= maxScore) {
       document.querySelector("#name-" + activePlayer).textContent = "WINNER!";
       document.querySelector(".dice").style.dysplay = "none";
       document

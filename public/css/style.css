@@ -148,6 +148,23 @@ i {
 .btn-new {
   top: 45px;
 }
+
+.score-div {
+  /* display: flex; */
+  /* justify-content: flex-start; */
+}
+
+#input-winning-score {
+  /* position: relative; */
+  position: absolute;
+  top: 5px;
+  left: 330px;
+}
+
+.btn-winning-score {
+  left: 550px;
+}
+
 .btn-roll {
   top: 403px;
 }
