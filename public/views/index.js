@@ -72,7 +72,6 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       let diceDOM = document.querySelector(".dice");
       diceDOM.style.display = "block";
       diceDOM.src = "media/dice-double-6.png";
-      prevDice = 0;
 
       setTimeout(() => {
         nextPlayer();
@@ -89,6 +88,8 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
 
 //***hold button will store score in global score***
 document.querySelector(".btn-hold").addEventListener("click", () => {
+  prevDice === 6 ? (prevDice = 0) : prevDice;
+
   if (gamePlaying) {
     // add CURRENT score to GLOBAL score
     scores[activePlayer] += roundScore;
