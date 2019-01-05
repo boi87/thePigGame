@@ -58,6 +58,15 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       //next player
       nextPlayer();
     }
+
+    if (dice === 6 && prevDice === 6) {
+      console.log("DOUBLE SIX");
+      nextPlayer();
+    } else if (dice === 6 && prevDice != 6) {
+      prevDice = 6;
+    } else {
+      prevDice = dice;
+    }
   }
 });
 
