@@ -72,6 +72,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       let diceDOM = document.querySelector(".dice");
       diceDOM.style.display = "block";
       diceDOM.src = "media/dice-double-6.png";
+      prevDice = 0;
 
       setTimeout(() => {
         nextPlayer();
