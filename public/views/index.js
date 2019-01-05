@@ -73,6 +73,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       diceDOM.style.display = "block";
       diceDOM.src = "media/dice-double-6.png";
 
+      // current player loses all global scores
       scores[activePlayer] = 0;
       document.querySelector("#score-" + activePlayer).textContent = 0;
 
