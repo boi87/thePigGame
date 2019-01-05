@@ -91,6 +91,8 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
 
 //***hold button will store score in global score***
 document.querySelector(".btn-hold").addEventListener("click", () => {
+  prevDice === 6 ? (prevDice = 0) : prevDice;
+
   if (gamePlaying) {
     // add CURRENT score to GLOBAL score
     scores[activePlayer] += roundScore;
