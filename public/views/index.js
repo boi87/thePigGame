@@ -14,26 +14,25 @@ let scores,
   dice,
   prevDice,
   gamePlaying,
-  inputMaxScore,
-  maxScore;
+  input,
+  winningScore;
 
 // customized max-score
 
-document.querySelector(".btn-winning-score").addEventListener("click", () => {
-  inputMaxScore = document.getElementById("input-winning-score").value;
-  console.log(inputMaxScore);
-  if (!inputMaxScore) {
-    maxScore = 100;
-    console.log("no custom max score entered");
-    alert("no custom max score entered. Your max score is 100");
-  } else {
-    // document.getElementById("input-winning-score").textContent = "fuck";
-    maxScore = inputMaxScore;
-    console.log("your new maxscore is", inputMaxScore);
-    alert("your new maxscore is " + inputMaxScore);
-    init();
-  }
-});
+// document.querySelector(".btn-winning-score").addEventListener("click", () => {
+
+//   if (!input) {
+//     maxScore = 100;
+//     console.log("no custom max score entered");
+//     alert("no custom max score entered. Your max score is 100");
+//   } else {
+//     // document.getElementById("input-winning-score").textContent = "fuck";
+//     maxScore = input;
+//     console.log("your new maxscore is", input);
+//     alert("your new maxscore is " + input);
+//     init();
+//   }
+// });
 // };
 
 // *** Initialize New Game ***
@@ -131,8 +130,15 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     document.querySelector("#score-" + activePlayer).textContent =
       scores[activePlayer];
 
+    input = document.querySelector(".final-score").value;
+    if (input) {
+      winningScore = input;
+    } else {
+      winningScore = 100;
+    }
+
     // check if player won the game
-    if (scores[activePlayer] >= maxScore) {
+    if (scores[activePlayer] >= winningScore) {
       document.querySelector("#name-" + activePlayer).textContent = "WINNER!";
       document.querySelector(".dice").style.dysplay = "none";
       document
