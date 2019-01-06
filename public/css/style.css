@@ -15,6 +15,20 @@
   text-transform: uppercase;
 }
 
+.btn-winning-score {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 560px;
+  color: #555;
+  font-size: 18px;
+  font-family: "Lato";
+  text-align: center;
+  padding: 10px;
+  width: 160px;
+  text-transform: uppercase;
+}
+
 .final-score:focus {
   outline: none;
 }
@@ -166,20 +180,11 @@ i {
   top: 45px;
 }
 
-.score-div {
-  /* display: flex; */
-  /* justify-content: flex-start; */
-}
-
 #input-winning-score {
   /* position: relative; */
   position: absolute;
   top: 5px;
   left: 330px;
-}
-
-.btn-winning-score {
-  left: 550px;
 }
 
 .btn-roll {

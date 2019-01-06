@@ -116,6 +116,14 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
   }
 });
 
+document.querySelector(".btn-winning-score").addEventListener("click", () => {
+  input = document.querySelector(".final-score").value;
+  if (input) {
+    winningScore = input;
+  } else {
+    winningScore = 100;
+  }
+});
 //***hold button will store score in global score***
 document.querySelector(".btn-hold").addEventListener("click", () => {
   // ***if active player pressed hold after a six, this won't impact the next player***
@@ -129,13 +137,6 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     // update the UI
     document.querySelector("#score-" + activePlayer).textContent =
       scores[activePlayer];
-
-    input = document.querySelector(".final-score").value;
-    if (input) {
-      winningScore = input;
-    } else {
-      winningScore = 100;
-    }
 
     // check if player won the game
     if (scores[activePlayer] >= winningScore) {
